@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'befarmayidsham.wsgi.application'
 #     }
 # }
 
-# Replace the SQLite DATABASES configuration with PostgreSQL:
+# # Replace the SQLite DATABASES configuration with PostgreSQL:
 DATABASES = {
     'default': dj_database_url.config(default='postgresql://befarmayidshamdb_user:F37JowPI49Z3D4QD6Rd9DTeltBw05S6s@dpg-crbp6hd6l47c73d8arig-a/befarmayidshamdb',conn_max_age=600)}
 
@@ -121,6 +121,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
+
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [BASE_DIR / "static"]  # new
 
 STATIC_URL = '/static/'
 # This production code might break development mode, so we check whether we're in DEBUG mode
