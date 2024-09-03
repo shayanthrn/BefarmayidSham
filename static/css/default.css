@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    background: hsl(var(--hue, 280), 80%, 60%);
+    cursor: pointer;
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  .pan {
+    cursor: pointer;
+    left: 75%;
+    margin-left: -100px;
+    margin-top: -225px;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100px 225px;
+    transform: rotate(45deg);
+    width: 200px;
+  }
+  .pancake {
+    backface-visibility: hidden;
+    height: 100%;
+    transform: rotate(-5deg) translate3d(0, 0, 1px);
+    width: 100%;
+  }
+  .pancake--cooking .pancake__face--smiling {
+    display: none;
+  }
+  .pancake--cooking .pancake__face--cooking {
+    display: block;
+  }
+  .pancake--flipping .pancake__face--smiling,
+  .pancake--flipping .pancake__face--cooking {
+    display: none;
+  }
+  .pancake--flipping .pancake__face--flipping {
+    display: block;
+  }
+  .pancake__container {
+    height: 120px;
+    left: 75%;
+    margin-left: -60px;
+    margin-top: -60px;
+    perspective: 2500px;
+    position: absolute;
+    top: 50%;
+    transform-style: preserve-3d;
+    width: 120px;
+    z-index: 2;
+  }
+  .pancake__wrapper {
+    backface-visibility: hidden;
+    height: 100%;
+    transform: rotate(45deg) translate3d(0, 0, 5px);
+    transform-style: preserve-3d;
+    width: 100%;
+  }
+  .pancake__back {
+    border-radius: 100%;
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, -1px);
+    width: 100%;
+  }
+  .pancake__back .pancake__back {
+    height: 100%;
+    width: 100%;
+  }
+  .pancake__back .pancake__back-base {
+    fill: #fff2a4;
+  }
+  .pancake__back .pancake__back-scorch {
+    animation: cook 120s forwards ease;
+  }
+  .pancake__head {
+    fill: #fff2a4;
+  }
+  .pancake__splodge {
+    animation: cook 120s forwards ease;
+    fill: #fff2a4;
+  }
+  .pancake__face {
+    display: none;
+  }
+  .pancake__face--smiling {
+    display: block;
+  }
+  @-moz-keyframes cook {
+    0% {
+      fill: #fff2a4;
+    }
+    50% {
+      fill: #eca24d;
+    }
+    100% {
+      fill: #b45326;
+    }
+  }
+  @-webkit-keyframes cook {
+    0% {
+      fill: #fff2a4;
+    }
+    50% {
+      fill: #eca24d;
+    }
+    100% {
+      fill: #b45326;
+    }
+  }
+  @-o-keyframes cook {
+    0% {
+      fill: #fff2a4;
+    }
+    50% {
+      fill: #eca24d;
+    }
+    100% {
+      fill: #b45326;
+    }
+  }
+  @keyframes cook {
+    0% {
+      fill: #fff2a4;
+    }
+    50% {
+      fill: #eca24d;
+    }
+    100% {
+      fill: #b45326;
+    }
+  }
+  
